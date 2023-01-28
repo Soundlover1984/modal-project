@@ -43,7 +43,7 @@ body.lock{
     &__content {
         padding: 60px 15px;
         overflow-x: hidden;
-        background-color:#FFFDEE;
+        background-color: $lemon;
         width: 414px;
         height: 668px;
         position: relative;
@@ -69,19 +69,19 @@ body.lock{
         position: absolute;
         right: 24px;
         top: 16px;
-        fill:rgba(0, 0, 0, 1);
         width: 24px;
         height: 24px;
         border-color: transparent;
-        background-color:#FFFDEE;
-    }
-    &__close:hover,
-    &__close:focus{
-        fill: #2196F3;
-    }
+        background-color: $lemon;
+    } 
+    &__cross{
+      max-width: 24px;
+    }  
 }
 
-.form{
+
+
+.form {
   z-index: 999;
   width: 384px;
   margin-left: auto;
@@ -101,22 +101,29 @@ body.lock{
   }
 
   &__input {
+    color: $placeholder-color;
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.05em;
     margin-top: 0;
     margin-bottom: 0;
     height: 54px;
-    border: 1px solid #C79002;
-    background-color:#FFFDEE;
+    border: 1px solid $brown;
+    background-color: $lemon;
     border-radius: 4px;
     padding-left: 12px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    // transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &__input:focus-within {
-    border: 1px solid #F3C653;
+  &__input:focus, &__input:hover {
+    outline: 0;
   }
 
   &__input::placeholder {
-    color: #808080;
+    color: $placeholder-color;
     font-family: 'Times New Roman';
     font-style: normal;
     font-weight: 700;
@@ -128,7 +135,7 @@ body.lock{
   &__label {
     margin-top: 8px;
     padding-left: 12px;
-    color: #C79002;
+    color: $brown;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -141,17 +148,48 @@ body.lock{
     margin-top: 0;
     margin-bottom: 0;
     height: 54px;
-    border: 1px solid #C79002;
-    background-color:#FFFDEE;
+    border: 1px solid $brown;
+    background-color: $lemon;
     border-radius: 4px;
     padding-left: 12px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: #808080;
+    color: $placeholder-color;
     font-family: 'Times New Roman';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.05em;
+  }
+
+  &__select:focus, &__select:hover {
+    outline: 0;
+  }
+
+  &__button {
+    display: flex;
+    color: $white;
+    background-color: $black;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border: 1px solid $accent-yellow;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__button:hover,
+  &__button:focus {
+  background-color: $accent-yellow;
+  color: $black;
   }
 }
