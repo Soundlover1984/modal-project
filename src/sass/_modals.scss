@@ -48,10 +48,15 @@ body.lock{
         transition: all 0.8s ease 0s;
         opacity: 0;
         transform: scale(0.7);
-
     }
 
-    
+    @media screen and (min-width: $tablet) {
+      &__content {
+        width: 712px;
+      }
+    }
+
+
 
     &__title {
     font-family: 'Times New Roman';
@@ -65,6 +70,14 @@ body.lock{
     text-align: center;
     margin-bottom: 40px;
     }
+
+    @media screen and (min-width: $tablet) {
+      &__title {
+        font-size: 40px;
+        line-height: 1.15;
+      }
+    }
+
 
     &__close {
         position: absolute;
@@ -109,6 +122,17 @@ body.lock{
   margin-right: auto;
   margin-top: 0;
 
+  @media screen and (min-width: $tablet) {
+    & {
+      font-size: 24px;
+      line-height: 1.166;
+      width: 592px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  }
+
   &__field {
     display: flex;
     flex-direction: column;
@@ -128,6 +152,7 @@ body.lock{
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
+    width: 100%;
     letter-spacing: 0.05em;
     margin-top: 0;
     margin-bottom: 0;
@@ -136,7 +161,15 @@ body.lock{
     background-color: $lemon;
     border-radius: 4px;
     padding-left: 12px;
-    // transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media screen and (min-width: $tablet) {
+    &__input {
+      font-size: 24px;
+      line-height: 1.166;
+      width: 288px;
+      height: 64px;
+    }
   }
 
   &__input:focus, &__input:hover {
@@ -152,6 +185,13 @@ body.lock{
     line-height: 1.15;
     letter-spacing: 0.05em;
   }
+  @media screen and (min-width: $tablet) {
+    &__input::placeholder {
+      font-size: 24px;
+      line-height: 1.166;
+    }
+  }
+
   
   &__label {
     margin-top: 8px;
@@ -163,6 +203,13 @@ body.lock{
     font-size: 14px;
     line-height: 1.21;
     letter-spacing: 0.02em;
+  }
+
+  @media screen and (min-width: $tablet) {
+    &__label {
+      font-size: 16px;
+      line-height: 1.25;
+    }
   }
   
   &__select{
@@ -177,10 +224,20 @@ body.lock{
     color: $placeholder-color;
     font-family: 'Times New Roman';
     font-style: normal;
+    width: 100%;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.05em;
+  }
+
+  @media screen and (min-width: $tablet) {
+    &__select {
+      font-size: 24px;
+      line-height: 1.166;
+      width: 288px;
+      height: 64px;
+    }
   }
 
   &__select:focus, &__select:hover {
@@ -207,6 +264,13 @@ body.lock{
     border: 1px solid $accent-yellow;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @media screen and (min-width: $tablet) {
+    &__button {
+      font-size: 24px;
+      line-height: 1.21;
+    }
   }
   &__button:hover,
   &__button:focus {
