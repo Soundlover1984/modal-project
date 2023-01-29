@@ -152,8 +152,6 @@ body.lock{
 }
 
 
-
-
 .form {
   z-index: 999;
   width: 384px;
@@ -183,6 +181,22 @@ body.lock{
     }
   }
 
+  @media screen and (min-width: $tablet) {
+    &__wrap-room-select {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 16px;
+      margin-bottom: 12px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    &__wrap-room-input {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 16px;
+      justify-content: flex-end;
+    }
+  }
 
   &__field {
     display: flex;
@@ -315,6 +329,21 @@ body.lock{
   pointer-events: none;
   }
   
+  &__select-wrap::before{
+    z-index: 0;
+    content: "";
+    position: absolute;
+    right: 5.5%;
+    top: 20%;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/down-bold.svg);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    transform: rotate(180deg);
+    visibility: hidden;
+    }
+
   &__button {
     margin-top: 40px;
     display: flex;
@@ -381,10 +410,9 @@ body.lock{
   @media screen and (min-width: $tablet) {
     &__button-price {
       margin-top: 12px;
+      font-size: 24px;
     }
   }
 }
-
-
 
 
