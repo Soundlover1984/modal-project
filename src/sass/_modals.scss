@@ -247,7 +247,7 @@ body.lock{
   }
 
   &__select-wrap::after{
-  // z-index: -1;
+  z-index: 1;
 	content: "";
 	position: absolute;
 	right: 5.5%;
@@ -257,8 +257,6 @@ body.lock{
 	background-image: url(../images/down-bold.svg);
 	background-repeat: no-repeat;
   pointer-events: none;
-  // transform: rotate(45deg);
-  // transition: all 0.15s ease-in-out;
   }
 
 
