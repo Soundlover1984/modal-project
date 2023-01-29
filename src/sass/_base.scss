@@ -113,3 +113,21 @@ $background-button: rgba(0, 0, 0, 0.4);
 
 $background-hero: #474747;
 $background-section: #939393;
+
+@mixin mobile {
+  @media screen and (min-width: 414px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
