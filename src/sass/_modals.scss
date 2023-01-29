@@ -352,7 +352,7 @@ body.lock{
   }
 
   &__button-price {
-    margin-top: 12px;
+    margin-top: 40px;
     display: flex;
     color: $white;
     background-color: $black;
@@ -377,6 +377,11 @@ body.lock{
   &__button-price:focus {
   background-color: $accent-yellow;
   color: $black;
+  }
+  @media screen and (min-width: $tablet) {
+    &__button-price {
+      margin-top: 12px;
+    }
   }
 }
 
