@@ -211,6 +211,7 @@ body.lock{
       line-height: 1.25;
     }
   }
+
   
   &__select{
     margin-top: 0;
@@ -231,6 +232,7 @@ body.lock{
     letter-spacing: 0.05em;
   }
 
+
   @media screen and (min-width: $tablet) {
     &__select {
       font-size: 24px;
@@ -243,6 +245,22 @@ body.lock{
   &__select:focus, &__select:hover {
     outline: 0;
   }
+
+  &__select-wrap::after{
+  // z-index: -1;
+	content: "";
+	position: absolute;
+	right: 5.5%;
+  top: 20%;
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/down-bold.svg);
+	background-repeat: no-repeat;
+  pointer-events: none;
+  // transform: rotate(45deg);
+  // transition: all 0.15s ease-in-out;
+  }
+
 
   &__button {
     display: flex;
@@ -306,3 +324,13 @@ body.lock{
   color: $black;
   }
 }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+
+
