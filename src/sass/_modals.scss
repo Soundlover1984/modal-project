@@ -148,7 +148,7 @@ body.lock{
       width: 592px;
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      column-gap: 16px;
     }
   }
 
@@ -157,6 +157,12 @@ body.lock{
      width: auto;
   }
 }
+   @media screen and (min-width: $tablet) {
+    &__wrap-booking-input, &__wrap-booking-select {
+      margin-bottom: 40px;
+    }
+  }
+
 
   &__field {
     display: flex;
