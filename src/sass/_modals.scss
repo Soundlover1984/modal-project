@@ -1,6 +1,7 @@
 body.lock{
     overflow: hidden;
 }
+
 .popup {
     visibility: hidden;
     position: fixed;
@@ -63,8 +64,6 @@ body.lock{
   }
 }
 
-
-
     &__title {
     font-family: 'Times New Roman';
     font-style: normal;
@@ -84,6 +83,27 @@ body.lock{
         line-height: 1.15;
       }
     }
+
+    &__title-price {
+      font-family: 'Times New Roman';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.16;
+      letter-spacing: 0.05em;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      margin-bottom: 40px;
+      }
+  
+      @media screen and (min-width: $tablet) {
+        &__title-price {
+          font-size: 32px;
+          line-height: 1.156;
+        }
+      }
+
 
 
     &__close {
@@ -159,7 +179,7 @@ body.lock{
 }
    @media screen and (min-width: $tablet) {
     &__wrap-booking-input, &__wrap-booking-select {
-      margin-bottom: 40px;
+      margin-bottom: 12px;
     }
   }
 
@@ -171,9 +191,10 @@ body.lock{
     position: relative;
   }
 
-
-  &__field:nth-child(4) {
-    margin-bottom: 40px;
+  @media screen and (min-width: $tablet) {
+    &__field {
+      margin-bottom: 28px;
+    }
   }
 
   &__input {
@@ -295,6 +316,7 @@ body.lock{
   }
   
   &__button {
+    margin-top: 40px;
     display: flex;
     color: $white;
     background-color: $black;
@@ -320,6 +342,7 @@ body.lock{
     &__button {
       font-size: 24px;
       line-height: 1.21;
+      margin-top: 0;
     }
   }
   &__button:hover,
@@ -329,7 +352,7 @@ body.lock{
   }
 
   &__button-price {
-    margin-top: 40px;
+    margin-top: 12px;
     display: flex;
     color: $white;
     background-color: $black;
@@ -357,12 +380,6 @@ body.lock{
   }
 }
 
-// select {
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-//   -o-appearance: none;
-//   appearance: none;
-// }
 
 
 
